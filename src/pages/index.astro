@@ -1,7 +1,18 @@
 ---
-const hello = "Hello,astro!";
+import Layout from "../layouts/Layout.astro";
+import { frontmatter, Content } from "../pages/me.md";
+
+const fm = frontmatter as { name: string; title: string };
 ---
 
-<div class="w-screen h-screen flex justify-center">
-	<h1 class="text-red-500 font-mono text-4xl">{hello}</h1>
-</div>
+<Layout title={fm.name}>
+	<header class="w-full h-20">
+		<div
+			class="flex-1 flex justify-center items-center font-bold text-6xl pt-4"
+		>
+			<a href="/">{fm.title}</a>
+		</div>
+	</header>
+	<main class="w-[60%] h-80 text-4xl"><Content /></main>
+	<footer></footer>
+</Layout>
