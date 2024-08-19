@@ -3,7 +3,7 @@ name: zennolux
 title: Hi,there!
 ---
 
-My name is zennolux. I am a old chinese guy who love coding.
+My name is zennolux. I am a chinese guy who love coding.
 
 <br>
 
