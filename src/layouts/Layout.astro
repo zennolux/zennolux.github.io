@@ -15,6 +15,16 @@ const { title } = Astro.props;
 	<body>
 		<div class="w-screen h-screen flex flex-col items-center font-mono gap-8">
 			<slot />
+			<footer class="absolute bottom-4 font-mono text-gray-500 text-2xl">
+				&copy; 2024 zennolux inc
+			</footer>
 		</div>
 	</body>
 </html>
+
+<script>
+	document.querySelectorAll("p")!.forEach((ele, index) => {
+		if (index == 0) return false;
+		ele.style.marginTop = "2rem";
+	});
+</script>
