@@ -2,26 +2,58 @@
 import { FaGithub } from "react-icons/fa";
 import Layout from "../layouts/Layout.astro";
 import { frontmatter, Content } from "../pages/me.md";
+import { CiLight } from "react-icons/ci";
+import { MdDarkMode } from "react-icons/md";
 
 const fm = frontmatter as { name: string; title: string };
 ---
 
-<Layout title={fm.name}>
-	<header class="w-full h-20">
-		<div class="flex">
-			<div class="flex-1"></div>
+<script>
+	const html = document.querySelector("html")!;
+	const darkEle = document.querySelector(".toggle-mode-dark")!;
+	const lightEle = document.querySelector(".toggle-mode-light")!;
+	const storageKey = "__zennolux__";
+	const mode = window.localStorage.getItem(storageKey);
 
-			<div
-				class="flex-1 flex justify-center items-center font-bold text-6xl pt-4"
-			>
-				{fm.title}
-			</div>
-			<div class="flex-1 flex items-center justify-end mr-8">
-				<a href="https://github.com/zennolux" target="_blank">
-					<FaGithub className="text-6xl" />
-				</a>
-			</div>
+	function removeDark(save = true) {
+		html.className = "";
+		lightEle.classList.remove("hidden");
+		darkEle?.classList.add("hidden");
+		save && window.localStorage.setItem(storageKey, "");
+	}
+
+	function setDark(save = true) {
+		html.className = "dark";
+		darkEle?.classList.remove("hidden");
+		lightEle.classList.add("hidden");
+		save && window.localStorage.setItem(storageKey, "dark");
+	}
+
+	darkEle?.addEventListener("click", () => removeDark());
+	lightEle?.addEventListener("click", () => setDark());
+
+	mode == "dark" ? setDark() : removeDark();
+</script>
+
+<Layout title={fm.name}>
+	<header class="w-[95%] h-20 flex items-center">
+		<div class="flex-1"></div>
+		<div
+			class="flex-1 flex justify-center items-center font-bold text-6xl dark:text-gray-400"
+		>
+			{fm.title}
+		</div>
+		<div class="flex-1 flex items-center justify-end gap-8">
+			<CiLight
+				className="text-6xl cursor-pointer toggle-mode-light text-gray-400"
+			/>
+			<MdDarkMode
+				className="text-6xl cursor-pointer toggle-mode-dark text-gray-400 hidden"
+			/>
+			<a href="https://github.com/zennolux" target="_blank">
+				<FaGithub className="text-6xl dark:text-gray-400" />
+			</a>
 		</div>
 	</header>
-	<main class="w-[60%] h-80 text-4xl"><Content /></main>
+	<main class="w-[60%] text-4xl dark:text-gray-400"><Content /></main>
 </Layout>
