@@ -3,8 +3,8 @@ name: zennolux
 title: Hi,there!
 ---
 
-My name is zennolux,a chinese guy who love coding.
+My name is zennolux, a chinese guy who love coding.
 
-Even though I have been a software enginer for severial years,but I still treat coding as an important part of my life.
+I have been a software engineer for several years, in the past, I mainly used PHP due to the necessity of my work; however, I do not particularly like it. Now, I prefer using TypeScript and Rust much more.
 
-In my spare time,I usually play mobile games as daily entertainment,especially racing games like `qq speed` is my favorite one.In addition, watching classic American movies and TV series is yet another hobby of mine.
+In my spare time, I usually play mobile games as daily entertainment, especially racing games; QQ Speed is my favorite one. In addition, watching classic American movies and TV series is another hobbyof mine.
