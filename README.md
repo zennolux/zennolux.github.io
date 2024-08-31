@@ -1,2 +1,1 @@
-#
-This is my github pages built with astro
+This is my [github pages](https://zennolux.us.kg) built with astro.
