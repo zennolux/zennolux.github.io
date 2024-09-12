@@ -1,1 +1,1 @@
-### A simple page for something about [me](https://zennolux.us.kg)
+## A simple page for something about [me](https://zennolux.us.kg)
