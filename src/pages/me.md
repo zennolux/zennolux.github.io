@@ -3,7 +3,7 @@ name: zennolux
 title: Hi,there!
 ---
 
-My name is [zennolux](https://zennolux.us.kg), a chinese guy who love coding. 
+My name is [zennolux](https://zennolux.us.kg), a chinese guy who extremely love coding. 
 
 I have been a software developer for several years, in the past, I mainly used PHP due to the necessity of my work; however, I do not particularly like it. Now, I prefer using TypeScript and Rust much more.
 
